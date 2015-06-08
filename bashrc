@@ -1,3 +1,7 @@
+alias ll="ls -laFh"
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
 function color_promt {
   local __user_host="\[\033[38;5;107m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;38m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\]"
   local __dir="\[$(tput sgr0)\]\[\033[38;5;144m\][\w\[$(tput sgr0)\]\[\033[38;5;150m\]]\[$(tput sgr0)\]\[\033[38;5;15m\]"

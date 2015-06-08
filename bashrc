@@ -14,3 +14,6 @@ color_promt
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
+
+export NVM_DIR="/Users/lestad/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

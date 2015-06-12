@@ -1,4 +1,5 @@
 alias ll="ls -laFh"
+alias s='sublime'
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 

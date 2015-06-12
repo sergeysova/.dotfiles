@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# install 
+source ./sublime.sh
+
+
 # backup old dotfiles
 echo -e "\033[1;31m"
 mkdir ~/.dotfiles_old
@@ -11,3 +15,5 @@ mv ~/.npmrc	  ~/.dotfiles_old/npmrc
 ln -s ~/.dotfiles/bashrc      ~/.bashrc
 ln -s ~/.dotfiles/npmrc       ~/.npmrc
 echo -e "\033[0;32mgood dotfiles well installed!\033[0m"
+
+source ~/.bashrc

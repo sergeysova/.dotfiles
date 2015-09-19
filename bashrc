@@ -1,5 +1,17 @@
 alias ll="ls -laFh"
+alias mk='mkdir -p'
+
+# editor / viewer
 alias s='sublime'
+alias o='open'
+
+# git
+alias g='git'
+alias gbr='git rev-parse --abbrev-ref HEAD'
+alias gpull='git pull origin `gbr`'
+alias gorig='git config --get remote.origin.url'
+
+
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
@@ -56,4 +68,60 @@ color_promt
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
+
+function te() {
+  touch $@;
+  vim $@;
+}
+
+function backup() {
+  ext=".backup"
+  for fil in "$@"
+  do
+    cp -r $fil "$fil$ext"
+  done
+}
+
+function restore() {
+  ext=".backup"
+  for fil in "$@"
+  do
+    backup="$fil$ext"
+    if [ -f $backup ];
+    then
+      if [ -f $fil ];
+      then
+        rm -rf $fil
+      fi
+      cp $backup $fil
+    else
+      echo "Backup file $fil$ext not found!"
+    fi
+  done
+}
+
+function dropbackup() {
+  ext=".backup"
+  for file in "$@"
+  do
+    backup="$file$ext"
+    if [ -f $backup ]
+    then
+      rm -rf $backup
+    fi
+  done
+}
+
+function removebackups() {
+  rm -rf *.backup
+}
+
+function disable() {
+  ext=".backup"
+  for file in "$@"
+  do
+    cp -r $file "$file$ext"
+    rm -rf $file
+  done
+}
 

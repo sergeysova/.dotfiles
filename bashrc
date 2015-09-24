@@ -127,3 +127,4 @@ function disable() {
   done
 }
 
+source ~/.dotfiles/git-completion.bash

@@ -9,7 +9,9 @@ alias o='open'
 alias g='git'
 alias gbr='git rev-parse --abbrev-ref HEAD'
 alias gpull='git pull origin `gbr`'
+alias gpush='git push origin `gbr`'
 alias gorig='git config --get remote.origin.url'
+alias go='git checkout '
 
 
 export CLICOLOR=1

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# install 
+# install sublime
 source ./sublime.sh
 
 

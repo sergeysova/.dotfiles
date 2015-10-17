@@ -12,6 +12,7 @@ alias gpull='git pull origin `gbr`'
 alias gpush='git push origin `gbr`'
 alias gorig='git config --get remote.origin.url'
 alias go='git checkout '
+alias ts='tig status'
 
 
 export CLICOLOR=1
@@ -51,6 +52,8 @@ function color_promt {
 }
 
 color_promt
+
+export PS2='    '
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize

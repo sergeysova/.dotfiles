@@ -41,6 +41,14 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+function user_lst {
+  if [ $(id -u) -eq 0 ]; then
+    usrlst="★"
+  else
+    usrlst="❖"
+  fi
+}
+
 
 function color_promt {
   local __user_name="\[\033[38;5;107m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]"
@@ -51,9 +59,10 @@ function color_promt {
   if [ $(id -u) -eq 0 ]; then
     __lst="★"
   fi
+  user_lst
   local __git_branch='\[\033[38;5;245m\]`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
   # export PS1="\n__user_name@$__user_host $__dir $__git_branch\[\033[38;5;15m\]\n$__lst "
-  export PS1="\n$__user_host -> $__dir $__git_branch \[\033[38;5;8m\]<\t> \n$__user_name \[\033[38;5;8m\][\W] \[\033[38;5;15m\]$__lst "
+  export PS1="\n$__user_host -> $__dir $__git_branch \[\033[38;5;8m\]<\t> \n$__user_name \[\033[38;5;8m\][\W] \[\033[38;5;15m\]$usrlst "
 }
 
 color_promt

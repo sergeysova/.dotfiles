@@ -1,4 +1,4 @@
-alias ll="ls -laFGh"
+alias ll="ls -lAGh"
 alias mk='mkdir -p'
 
 # editor / viewer

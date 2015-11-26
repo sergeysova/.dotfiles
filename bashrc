@@ -129,3 +129,7 @@ function disable() {
 }
 
 source ~/.dotfiles/git-completion.bash
+
+function installnvm() {
+  wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+}

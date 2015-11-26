@@ -67,7 +67,7 @@ function color_promt {
 
 color_promt
 
-export PS2='WOWO'
+# export PS2='WOWO'
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize

@@ -1,4 +1,4 @@
-alias ll="ls -laFGh"
+alias ll="ls -lAGh"
 alias mk='mkdir -p'
 
 # editor / viewer
@@ -67,7 +67,7 @@ function color_promt {
 
 color_promt
 
-export PS2='WOWO'
+# export PS2='WOWO'
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
@@ -129,6 +129,7 @@ function disable() {
 }
 
 source ~/.dotfiles/git-completion.bash
+
 ###-begin-npm-completion-###
 #
 # npm command completion script
@@ -186,3 +187,7 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+
+function installnvm() {
+  wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+}

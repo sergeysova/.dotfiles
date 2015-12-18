@@ -5,6 +5,7 @@
         email = lestad@bk.ru
 [core]
         excludesfile = /Users/ssova/.gitignore_global
+	ignorecase = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

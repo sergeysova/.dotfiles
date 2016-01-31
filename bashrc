@@ -4,6 +4,8 @@ alias mk='mkdir -p'
 # editor / viewer
 alias s='sublime'
 alias o='open'
+alias c='cargo'
+alias cc='ccat -G Comment="darkgreen" -G Keyword="teal" -G Plaintext="lightgray" -G Type="Blue" -G Punctuation="darkgray"'
 
 # git
 alias g='git'
@@ -191,3 +193,5 @@ fi
 function installnvm() {
   wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
 }
+
+export ANDROID_HOME=/usr/local/opt/android-sdk

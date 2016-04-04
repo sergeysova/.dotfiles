@@ -17,6 +17,11 @@ alias go='git checkout '
 alias ts='tig status'
 
 
+if [ -x ~/.bash_include ]; then
+  source ~/.bash_include
+fi
+
+
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 

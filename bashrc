@@ -1,5 +1,6 @@
 alias ll="ls -AlGhp --group-directories-first"
 alias mk='mkdir -p'
+alias scr='tm=$(date +"%F_%H%M%S_%s"); xwd -out screenshot-$tm.xwd -root -display :0.0 && convert screenshot-$tm.xwd screenshot-$tm.jpg; rm screenshot-$tm.xwd; echo "Created screenshot-$tm.jpg"'
 
 # editor / viewer
 alias s='sublime'
@@ -15,6 +16,9 @@ alias gpush='git push origin `gbr`'
 alias gorig='git config --get remote.origin.url'
 alias go='git checkout '
 alias ts='tig status'
+
+alias npmr='npm run'
+alias be='bundle exec'
 
 
 if [ -x ~/.bash_include ]; then

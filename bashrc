@@ -21,7 +21,7 @@ alias npmr='npm run'
 alias be='bundle exec'
 
 
-if [ -x ~/.bash_include ]; then
+if [ -f ~/.bash_include ]; then
   source ~/.bash_include
 fi
 

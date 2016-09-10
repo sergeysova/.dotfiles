@@ -1,7 +1,7 @@
 [push]
         default = matching
 [user]
-        name = Sergey Sova
+	name = Sergey Sova
 	email = i.am@lestad.net
 	signingkey = 55E17037
 [core]

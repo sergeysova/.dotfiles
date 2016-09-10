@@ -19,6 +19,7 @@ alias ts='tig status'
 
 alias npmr='npm run'
 alias be='bundle exec'
+alias jc='jq . '
 
 
 if [ -f ~/.bash_include ]; then
@@ -73,7 +74,8 @@ function color_promt {
   user_lst
   local __git_branch='\[\033[38;5;245m\]`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
   # export PS1="\n__user_name@$__user_host $__dir $__git_branch\[\033[38;5;15m\]\n$__lst "
-  export PS1="\n$__user_host -> $__dir $__git_branch \[\033[38;5;8m\]<\t> \n${user_lst}$__user_name \[\033[38;5;8m\][\W] \[\033[38;5;15m\]$usrlst "
+  export PS1="$__user_host -> $__dir $__git_branch \[\033[38;5;8m\]<\t> \n${user_lst}$__user_name \[\033[38;5;8m\][\W] \[\033[38;5;15m\]$usrlst "
+#  export PROMPT_COMMAND="printf \"\n\""
 }
 
 color_promt
@@ -140,3 +142,4 @@ function disable() {
 }
 
 source ~/.dotfiles/git-completion.bash
+

@@ -20,6 +20,7 @@ alias ts='tig status'
 alias npmr='npm run'
 alias be='bundle exec'
 alias jc='jq . '
+alias used='du -sch .[!.]* *'
 
 
 if [ -f ~/.bash_include ]; then

@@ -99,5 +99,5 @@ alias npmr='npm run'
 
 alias ll="ls -AlGhp --group-directories-first"
 alias mk='mkdir -p'
-alias used='du -sch .[!.]* *'
-
+alias usedall='du -sh .[!.]* *'
+alias usedall='du -sh * *'

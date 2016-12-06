@@ -8,6 +8,11 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
+# ZSH_THEME="powerline"
+# POWERLINE_PATH="short"
+
+# Hide user and host names
+DEFAULT_USER="lestad"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,7 +56,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rails nvm npm tig rake gem git-extras github sudo bundler command-not-found git-hubflow common-aliases)
+plugins=(git rails nvm npm tig rake gem git-extras github sudo bundler command-not-found git-hubflow common-aliases zsh-completions zsh-wakatime)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,6 +98,7 @@ alias gpull='git pull origin `gbr`'
 alias gpush='git push origin `gbr`'
 alias gorig='git config --get remote.origin.url'
 alias go='git checkout '
+alias ggc='git fsck && git gc --prune=all'
 alias ts='tig status'
 
 alias npmr='npm run'

@@ -25,7 +25,7 @@ DEFAULT_USER="lestad"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=6
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -56,7 +56,27 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rails nvm npm tig rake gem git-extras github sudo bundler command-not-found git-hubflow common-aliases zsh-completions zsh-wakatime)
+plugins=(
+  git
+  rails
+  rvm
+  nvm
+  npm
+  tig
+  rake
+  gem
+  git-extras
+  github
+  sudo
+  bundler
+  command-not-found
+  git-hubflow
+  common-aliases
+  zsh-completions
+  zsh-wakatime
+  pip
+  z
+)
 
 source $ZSH/oh-my-zsh.sh
 

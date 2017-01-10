@@ -4,10 +4,63 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# Configure PowerLevel9K theme
+
+function zsh_package_node() {
+  local file=false
+
+  if [[ -f ./package.json ]]; then
+    file="./package.json"
+  elif [[ -f ../package.json ]]; then
+    file="../package.json"
+  elif [[ -f ../../package.json ]]; then
+    file="../../package.json"
+  elif [[ -f ../../../package.json ]]; then
+    file="../../../package.json"
+  elif [[ -f ../../../package.json ]]; then
+    file="../../../package.json"
+  elif [[ -f ../../../../package.json ]]; then
+    file="../../../../package.json"
+  elif [[ -f ../../../../../package.json ]]; then
+    file="../../../../../package.json"
+  elif [[ -f ../../../../../../package.json ]]; then
+    file="../../../../../../package.json"
+  elif [[ -f ../../../../../../../package.json ]]; then
+    file="../../../../../../../package.json"
+  elif [[ -f ../../../../../../../../package.json ]]; then
+    file="../../../../../../../../package.json"
+  elif [[ -f ../../../../../../../../../package.json ]]; then
+    file="../../../../../../../../../package.json"
+  elif [[ -f ../../../../../../../../../../package.json ]]; then
+    file="../../../../../../../../../../package.json"
+  fi
+
+  if [[ -f $file ]]; then
+    local name=$(jq .name $file 2> /dev/null | sed -e 's/^"//' -e 's/"$//')
+    local version=$(jq .version $file 2> /dev/null | sed -e 's/^"//' -e 's/"$//')
+
+    if [[ name && version ]]; then
+      echo -n "$name@$version"
+    fi
+  fi
+}
+
+POWERLEVEL9K_CUSTOM_PACKAGE_NODE="zsh_package_node"
+POWERLEVEL9K_CUSTOM_PACKAGE_NODE_BACKGROUND="blue"
+POWERLEVEL9K_CUSTOM_PACKAGE_NODE_FOREGROUND="white"
+
+POWERLEVEL9K_NODE_VERSION_FOREGROUND="black"
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir status)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs custom_package_node) # node_version nvm
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
+export TERM="xterm-256color"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 # ZSH_THEME="powerline"
 # POWERLINE_PATH="short"
 
@@ -124,6 +177,10 @@ alias ts='tig status'
 alias npmr='npm run'
 
 alias ll="ls -AlGhp --group-directories-first"
+alias l="ll"
 alias mk='mkdir -p'
 alias usedall='du -sh .[!.]* *'
 alias used='du -sh * *'
+
+
+alias -s rb=vim

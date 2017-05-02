@@ -3,7 +3,7 @@
 [user]
 	name = Sergey Sova
 	email = i.am@lestad.net
-	signingkey = 55E17037
+	signingkey = C0E44D27
 [core]
         excludesfile = /Users/ssova/.gitignore_global
 	ignorecase = false

@@ -164,19 +164,20 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR='vim'
 
+bindkey "^X\\x7f" backward-kill-line
+
 
 alias g='git'
 alias gbr='git rev-parse --abbrev-ref HEAD'
 alias gpull='git pull origin `gbr`'
 alias gpush='git push origin `gbr`'
 alias gorig='git config --get remote.origin.url'
-alias go='git checkout '
 alias ggc='git fsck && git gc --prune=all'
 alias ts='tig status'
 
 alias npmr='npm run'
 
-alias ll="ls -AlGhp --group-directories-first"
+alias ll="ls -AlGhp"
 alias l="ll"
 alias mk='mkdir -p'
 alias usedall='du -sh .[!.]* *'

@@ -51,8 +51,8 @@ POWERLEVEL9K_CUSTOM_PACKAGE_NODE_FOREGROUND="white"
 
 POWERLEVEL9K_NODE_VERSION_FOREGROUND="black"
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir status)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs custom_package_node) # node_version nvm
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs custom_package_node nvm) # node_version nvm
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -78,7 +78,7 @@ DEFAULT_USER="lestad"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-export UPDATE_ZSH_DAYS=6
+export UPDATE_ZSH_DAYS=7
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -111,13 +111,13 @@ ENABLE_CORRECTION="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  rails
-  rvm
+#  rails
+#  rvm
   nvm
   npm
   tig
-  rake
-  gem
+#  rake
+#  gem
   git-extras
   github
   sudo
@@ -126,8 +126,8 @@ plugins=(
   git-hubflow
   common-aliases
   zsh-completions
-  zsh-wakatime
-  pip
+#  zsh-wakatime
+#  pip
   z
 )
 

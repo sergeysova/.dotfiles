@@ -39,4 +39,6 @@
 [color]
 	ui = true
 [commit]
-	gpgsign = true
+	gpgSign = true
+[tag]
+	forceSignAnnotated = true

@@ -111,6 +111,7 @@ ENABLE_CORRECTION="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+#  brew # bundled
 #  rails
 #  rvm
   nvm
@@ -119,13 +120,14 @@ plugins=(
 #  rake
 #  gem
   git-extras
-  github
+#  github
   sudo
-  bundler
+#  bundler
   command-not-found
-  git-hubflow
+#  git-hubflow
   common-aliases
   zsh-completions
+  osx
 #  zsh-wakatime
 #  pip
   z
@@ -177,6 +179,8 @@ alias ts='tig status'
 
 alias npmr='npm run'
 
+alias lll="exa -lahg --group-directories-first --git"
+alias lsd="lll"
 alias ll="ls -AlGhp"
 alias l="ll"
 alias mk='mkdir -p'

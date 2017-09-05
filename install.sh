@@ -17,7 +17,12 @@ ln -s ~/.dotfiles/npmrc       ~/.npmrc
 ln -s ~/.dotfiles/gitconfig   ~/.gitconfig
 ln -s ~/.dotfiles/zshrc       ~/.zshrc
 ln -s ~/.dotfiles/psqlrc      ~/.psqlrc
+
 defaults import com.googlecode.iterm2 - < ./iterm2.defaults
+defaults import com.apple.dock - < ./dock.plist
+defaults import com.apple.finder - < ./finder.plist
+defaults import com.apple.driver.AppleBluetoothMultitouch.trackpad - < ./trackpad.plist
+
 echo -e "\033[0;32mgood dotfiles well installed!\033[0m"
 
 source ~/.bashrc

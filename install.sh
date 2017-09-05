@@ -17,6 +17,7 @@ ln -s ~/.dotfiles/npmrc       ~/.npmrc
 ln -s ~/.dotfiles/gitconfig   ~/.gitconfig
 ln -s ~/.dotfiles/zshrc       ~/.zshrc
 ln -s ~/.dotfiles/psqlrc      ~/.psqlrc
+defaults import com.googlecode.iterm2 - < ./iterm2.defaults
 echo -e "\033[0;32mgood dotfiles well installed!\033[0m"
 
 source ~/.bashrc

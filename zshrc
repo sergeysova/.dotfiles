@@ -179,9 +179,9 @@ alias ts='tig status'
 
 alias npmr='npm run'
 
-alias lll="exa -lahg --group-directories-first --git"
+alias ll="exa -lahg --group-directories-first --git"
 alias lsd="lll"
-alias ll="ls -AlGhp"
+alias lll="ls -AlGhp"
 alias l="ll"
 alias mk='mkdir -p'
 alias usedall='du -sh .[!.]* *'

@@ -19,7 +19,6 @@ ln -s ~/.dotfiles/zshrc       ~/.zshrc
 ln -s ~/.dotfiles/psqlrc      ~/.psqlrc
 
 defaults import com.googlecode.iterm2 - < ./iterm2.plist
-defaults import com.apple.dock - < ./dock.plist
 defaults import com.apple.finder - < ./finder.plist
 defaults import com.apple.driver.AppleBluetoothMultitouch.trackpad - < ./trackpad.plist
 

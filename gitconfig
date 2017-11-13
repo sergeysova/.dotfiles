@@ -17,6 +17,7 @@
         fp = fetch -p
         cim = commit -m
 	l = log --oneline --graph --format='%C(yellow)%h %C(green)%cn %C(reset)%s'
+	ch = log --pretty=format:'- %C(yellow)%h %Creset%s'
 [merge]
 	tool = vimdiff
 

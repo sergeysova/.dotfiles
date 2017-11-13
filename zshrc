@@ -179,7 +179,7 @@ alias ts='tig status'
 
 alias npmr='npm run'
 
-alias ll="exa -lahg --group-directories-first --git"
+alias ll="exa -lah --group-directories-first --git"
 alias lsd="lll"
 alias lll="ls -AlGhp"
 alias l="ll"
@@ -189,3 +189,4 @@ alias used='du -sh * *'
 
 
 alias -s rb=vim
+

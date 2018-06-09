@@ -111,12 +111,13 @@ ENABLE_CORRECTION="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+	zsh-autosuggestions
 #  brew # bundled
 #  rails
 #  rvm
   nvm
   npm
-  tig
+#  tig
 #  rake
 #  gem
   git-extras

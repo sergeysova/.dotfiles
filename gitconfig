@@ -1,25 +1,26 @@
 [push]
-        default = matching
+    default = matching
 [user]
-	name = Sergey Sova
-	email = i.am@lestad.net
-	signingkey = C0E44D27
+    name = Sergey Sova
+    email = ssova@yandex-team.ru
+    # signingkey = C0E44D27
+
 [core]
-        excludesfile = /Users/ssova/.gitignore_global
-	ignorecase = false
-	editor = /usr/bin/vim
+    excludesfile = /Users/ssova/.gitignore_global
+    ignorecase = false
+    editor = /usr/bin/vim
 [alias]
-        co = checkout
-        ci = commit
-        s = status
-        br = branch
-        h = log --pretty=format:\"%C(yellow)%h %C(green)[%cn] %C(cyan)%ad %Creset| %s %C(blue)%d\" --graph --date=short
-        fp = fetch -p
-        cim = commit -m
-	l = log --oneline --graph --format='%C(yellow)%h %C(green)%cn %C(reset)%s'
-	ch = log --pretty=format:'- %C(yellow)%h %Creset%s'
+    co = checkout
+    ci = commit
+    s = status
+    br = branch
+    h = log --pretty=format:\"%C(yellow)%h %C(green)[%cn] %C(cyan)%ad %Creset| %s %C(blue)%d\" --graph --date=short
+    fp = fetch -p
+    cim = commit -m
+    l = log --oneline --graph --format='%C(yellow)%h %C(green)%cn %C(reset)%s'
+    ch = log --pretty=format:'- %C(yellow)%h %Creset%s'
 [merge]
-	tool = vimdiff
+    tool = vimdiff
 
 [color "branch"]
     current = yellow reverse
@@ -38,8 +39,6 @@
 [merge]
     conflictstyle = diff3
 [color]
-	ui = true
-[commit]
-	gpgSign = true
+    ui = true
 [tag]
-	forceSignAnnotated = true
+    forceSignAnnotated = true
